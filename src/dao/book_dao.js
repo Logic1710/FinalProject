@@ -1,5 +1,22 @@
 import connectDB from "../../db_connect";
 import Book from '../model/book'
+
+async function findBook(name){
+    let books
+    await connectDB(async(db)=>{
+        try {
+            books = await db.collection('books').find({name:'/'+name+'/'})
+            if (!books)
+                return null
+        }catch (e) {
+            console.log(e)
+        }
+    })
+    console.log("Find books")
+    books = Book.getAllBooks(books)
+    return (books)
+}
+
 async function findAllBooks(){
     let books
     await connectDB(async(db)=>{
@@ -16,13 +33,23 @@ async function findAllBooks(){
     return (books)
 }
 
-async function createBook(title, author){
+async function createBook(ISBN, name, author, language, cover, category, stock, price, status, description, page, date){
     let books
     await connectDB(async(db)=> {
         try {
             books = await db.collection('books').insertOne({
-                title:title,
-                author:author
+                ISBN:ISBN,
+                name:name,
+                author:author,
+                language:language,
+                cover:cover,
+                category:category,
+                stock:stock,
+                price:price,
+                status:status,
+                description:description,
+                page:page,
+                date:date
             })
         } catch (e) {
             console.log(e)
@@ -32,11 +59,12 @@ async function createBook(title, author){
     return (books)
 }
 
-async function deleteBook(title) {
+// ganti pake id
+async function deleteBook(id) {
     let books
     await connectDB(async (db) => {
         try {
-            books = await db.collection('books').deleteOne({title : title})
+            books = await db.collection('books').deleteOne({id : id})
         } catch (e) {
             console.log(e)
         }
@@ -45,14 +73,25 @@ async function deleteBook(title) {
     return (books)
 }
 
-async function updateBook(title, utitle, uauthor) {
+//ganti pake id
+async function updateBook(id , uISBN, uname, uauthor, ulanguage, ucover, ucategory, ustock, uprice, ustatus, udescription, upage, udate) {
     let books
     await connectDB(async (db) => {
         try {
-            books = await db.collection('books').updateOne({title: title}, {
+            books = await db.collection('books').updateOne({id: id}, {
                 $set: {
-                    title: utitle,
-                    author: uauthor
+                    ISBN:uISBN,
+                    name:uname,
+                    author:uauthor,
+                    language:ulanguage,
+                    cover:ucover,
+                    category:ucategory,
+                    stock:ustock,
+                    price:uprice,
+                    status:ustatus,
+                    description:udescription,
+                    page:upage,
+                    date:udate
                 }
             })
         } catch (e) {
@@ -64,5 +103,5 @@ async function updateBook(title, utitle, uauthor) {
 }
 
 export default {
-    findAllBooks, deleteBook, updateBook, createBook
+    findBook, findAllBooks, deleteBook, updateBook, createBook
 }
