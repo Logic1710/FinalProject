@@ -1,5 +1,6 @@
 import React,{useEffect, useState} from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 const BookList = () => {
     const [books, setBook] = useState([]);
@@ -12,9 +13,19 @@ const BookList = () => {
         setBook(response.data)
     }
 
+    const deleteBook = async (id) =>{
+        try{
+            await axios.delete(`http://localhost:5000/books/${id}`);
+            getBooks();
+        }catch(error){
+            console.log(error)
+        }
+    }
+
   return (
     <div className="columns">
         <div className="column is-half">
+                <Link to="add" className="button is-success">Add new book</Link>
             <table className="table is-striped is-fullwidth mt-5">
                 <thead>
                     <tr>
@@ -51,8 +62,8 @@ const BookList = () => {
                         <td>{book.Page}</td>
                         <td>{book.Date}</td>
                         <td>
-                            <button className="button is-info is-small">Edit</button>
-                            <button className="button is-danger is-small">Delete</button>
+                            <Link to={`update/${book._id}`} className="button is-info is-small">Edit</Link>
+                            <button onClick={() => deleteBook(book._id)} className="button is-danger is-small">Delete</button>
                         </td>
                     </tr>
                     ))}

@@ -130,5 +130,7 @@ export const AddBook = () => {
             </form>
         </div>
     </div>
-  )
-}
+  );
+};
+
+export default AddBook;

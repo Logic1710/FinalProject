@@ -1,8 +1,8 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 
-export const AddBook = () => {
+export const UpdateBook = () => {
     const[ISBN, setISBN] = useState("");
     const[name, setName] = useState("");
     const[Author, setAuthor] = useState("");
@@ -15,12 +15,35 @@ export const AddBook = () => {
     const[Description, setDescription] = useState("");
     const[Page, setPage] = useState("");
     const[Date, setDate] = useState("");
+
     const navigate = useNavigate();
 
-    const saveBook = async (e) => {
+    const {id} = useParams();
+
+    useEffect(() => {
+        getBookById();
+    }, []);
+
+    const getBookById = async () => {
+        const response = await axios.get(`http://localhost:5000/books/${id}`)
+        setISBN(response.data.ISBN);
+        setName(response.data.name);
+        setAuthor(response.data.Author);
+        setLanguage(response.data.Language);
+        setCover(response.data.Cover);
+        setCategory(response.data.Category);
+        setStock(response.data.Stock);
+        setPrice(response.data.Price);
+        setStatus(response.data.Status);
+        setDescription(response.data.Description);
+        setPage(response.data.Page);
+        setDate(response.data.Date);
+    }
+
+    const updateBook = async (e) => {
         e.preventDefault();
         try {
-            await axios.post('http://localhost:5000/books', {
+            await axios.patch(`http://localhost:5000/books/${id}`, {
                 ISBN, 
                 name, 
                 Author, 
@@ -43,7 +66,7 @@ export const AddBook = () => {
   return (
     <div className="columns">
         <div className="column is-half">
-            <form onSubmit={saveBook}>
+            <form onSubmit={updateBook}>
                 <div className="field">
                     <label className="label">ISBN</label>
                     <div className="control">
@@ -124,11 +147,13 @@ export const AddBook = () => {
                 </div>
                 <div className="field">
                     <div className="control">
-                        <button type='submit' className="button is-success">Save</button>
+                        <button type='submit' className="button is-success">Update</button>
                     </div>
                 </div>
             </form>
         </div>
     </div>
-  )
-}
+  );
+};
+
+export default UpdateBook;
