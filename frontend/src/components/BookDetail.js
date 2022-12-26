@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import '../App.css';
 //
 // NOT YET COMPLETED
-//
+//.
 const BookDetail = (props) => {
     const book = props.book;
 
