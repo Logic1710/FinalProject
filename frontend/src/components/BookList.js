@@ -1,7 +1,7 @@
 import React,{useEffect, useState} from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
-
+import {Link} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 const BookList = () => {
     const [books, setBook] = useState([]);
     useEffect(() =>{
@@ -13,19 +13,21 @@ const BookList = () => {
         setBook(response.data)
     }
 
-    const deleteBook = async (id) =>{
-        try{
-            await axios.delete(`http://localhost:5000/books/${id}`);
-            getBooks();
-        }catch(error){
-            console.log(error)
-        }
-    }
+    const navigate = useNavigate();
+    const onDeleteClick = (id) => {
+        axios
+            .delete(`http://localhost:5000/books/${id}`)
+            .then((res) => {
+                navigate('/');
+            })
+            .catch((err) => {
+                console.log('Error nya di BookList_deleteClick');
+            });
+    };
 
   return (
     <div className="columns">
         <div className="column is-half">
-                <Link to="add" className="button is-success">Add new book</Link>
             <table className="table is-striped is-fullwidth mt-5">
                 <thead>
                     <tr>
@@ -44,10 +46,10 @@ const BookList = () => {
                         <th>Date</th>
                         <th>Actions</th>
                     </tr>
-                </thead>
-                <tbody>
+                        </thead>
+                        <tbody>
                     {books.map((book, index) => (
-                    <tr key={book._id}>
+                        <tr key={book._id}>
                         <td>{index + 1}</td>
                         <td>{book.ISBN}</td>
                         <td>{book.name}</td>
@@ -62,8 +64,11 @@ const BookList = () => {
                         <td>{book.Page}</td>
                         <td>{book.Date}</td>
                         <td>
-                            <Link to={`update/${book._id}`} className="button is-info is-small">Edit</Link>
-                            <button onClick={() => deleteBook(book._id)} className="button is-danger is-small">Delete</button>
+                            {/*<button className="button is-info is-small" >Edit</button>*/}
+                            <Link to={`/UpdateBook/${book._id}`} className="button is-info is-small">Edit</Link>
+                            <button className="button is-danger is-small" onClick={()=> {
+                                onDeleteClick(book._id);
+                            }}>Delete</button>
                         </td>
                     </tr>
                     ))}
