@@ -2,52 +2,52 @@ import mongoose from "mongoose";
 
 const Book = mongoose.Schema({
     ISBN:{
-        type: Number,
-        required: false
+        type: String,
+        required: true
     },
     name:{
         type: String,
-        required: false
+        required: true
     },
     Author:{
         type: String,
-        required: false
+        required: true
     },
     Language:{
         type: String,
-        required: false
+        required: true
     },
     Cover:{
         type: String,
-        required: false
+        required: true
     },
     Category:{
-        type: Array,
-        required: false
+        type: String,
+        required: true
     },
     Stock:{
         type: Number,
-        required: false
+        required: true
     },
     Price:{
         type: Number,
-        required: false
+        required: true
     },
     Status:{
-        type: Boolean,
-        required: false
+        type: String,
+        required: true
     },
     Description:{
         type: String,
-        required: false
+        required: true
     },
     Page:{
         type: Number,
-        required: false
+        required: true
     },
     Date:{
-        type: String,
-        required: false
+        type: Date,
+        required: true
     }
 })
 
