@@ -4,17 +4,17 @@ import { AddBook } from "./components/AddBook";
 import UpdateBook from "./components/UpdateBook";
 import BookListReader from "./components/BookListReader";
 import BookDetail from "./components/BookDetail";
-// ehe
+
 function App() {
   return (
     <BrowserRouter>
       <div className="container">
         <Routes>
-          <Route path="/" element={<BookList />}/>
+          <Route path="/admin" element={<BookList />}/>
           <Route path="/add" element={<AddBook />}/>
-          <Route path="/update" element={<UpdateBook/>}/>
-          <Route path="/readerhome" element={<BookListReader/>}/>
-          <Route path="/BookDetail" element={<BookDetail/>}/>
+          <Route path="/update/:id" element={<UpdateBook/>}/>
+          <Route path="/" element={<BookListReader/>}/>
+          <Route path="/BookDetail/:id" element={<BookDetail/>}/>
         </Routes>
       </div>
     </BrowserRouter>

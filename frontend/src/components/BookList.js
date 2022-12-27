@@ -15,19 +15,18 @@ const BookList = () => {
 
     const navigate = useNavigate();
     const onDeleteClick = (id) => {
-        axios
-            .delete(`http://localhost:5000/books/${id}`)
-            .then((res) => {
-                navigate('/');
-            })
-            .catch((err) => {
-                console.log('Error nya di BookList_deleteClick');
-            });
+        try{
+        axios.delete(`http://localhost:5000/books/${id}`);
+        navigate("/");
+        }catch(error){
+            console.log(error);
+        }
     };
 
   return (
-    <div className="columns">
+    <div className="columns mt-5">
         <div className="column is-half">
+        <Link to={`/add`} className="button is-info is-small">Add New Book</Link>
             <table className="table is-striped is-fullwidth mt-5">
                 <thead>
                     <tr>
@@ -64,8 +63,7 @@ const BookList = () => {
                         <td>{book.Page}</td>
                         <td>{book.Date}</td>
                         <td>
-                            {/*<button className="button is-info is-small" >Edit</button>*/}
-                            <Link to={`/UpdateBook/${book._id}`} className="button is-info is-small">Edit</Link>
+                            <Link to={`/update/${book._id}`} className="button is-info is-small">Edit</Link>
                             <button className="button is-danger is-small" onClick={()=> {
                                 onDeleteClick(book._id);
                             }}>Delete</button>
