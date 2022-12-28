@@ -4,20 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d9df2208-6f67-43ed-b44b-3abc876dbe88" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/BookDetailAdmin.js" afterDir="false" />
+    <list default="true" id="d9df2208-6f67-43ed-b44b-3abc876dbe88" name="Changes" comment="yg belom :&#10;Sign in measure,&#10;Search bar">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/models/BookModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/models/BookModel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/AddBook.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/AddBook.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/BookDetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/BookDetail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/BookList.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/BookList.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/BookListReader.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/BookListReader.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/UpdateBook.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/UpdateBook.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,8 +59,16 @@
       <updated>1672123824445</updated>
       <workItem from="1672123826216" duration="55000" />
       <workItem from="1672123882939" duration="6008000" />
-      <workItem from="1672216599415" duration="19154000" />
+      <workItem from="1672216599415" duration="21433000" />
     </task>
+    <task id="LOCAL-00001" summary="yg belom :&#10;Sign in measure,&#10;Search bar">
+      <created>1672238216203</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1672238216203</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -87,5 +84,24 @@
         </entry>
       </map>
     </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="origin/styling" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="yg belom :&#10;Sign in measure,&#10;Search bar" />
+    <option name="LAST_COMMIT_MESSAGE" value="yg belom :&#10;Sign in measure,&#10;Search bar" />
   </component>
 </project>

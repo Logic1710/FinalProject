@@ -35,8 +35,17 @@ const BookListReader = () => {
                                 <h3>Price : IDR {book.Price}</h3>
                             </div>
                         </div>
+                        <hr
+                            style={{
+                                color: '#000000',
+                                backgroundColor: '#000000',
+                                height: .5,
+                                borderColor : '#000000'
+                            }}
+                        />
                     </Link>
                         ))}
+
                 </div>
             </div>
     )
