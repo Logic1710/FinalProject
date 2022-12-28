@@ -15,6 +15,7 @@ export const UpdateBook = () => {
     const[Description, setDescription] = useState("");
     const[Page, setPage] = useState("");
     const[Date, setDate] = useState("");
+    const[Img, setImg]= useState("");
 
     const navigate = useNavigate();
 
@@ -38,6 +39,7 @@ export const UpdateBook = () => {
         setDescription(response.data.Description);
         setPage(response.data.Page);
         setDate(response.data.Date);
+        setImg(response.data.Img);
     }
 
     const updateBook = async (e) => {
@@ -55,9 +57,10 @@ export const UpdateBook = () => {
                 Status, 
                 Description, 
                 Page, 
-                Date
+                Date,
+                Img
             });
-            navigate("/")
+            navigate("/admin")
         }catch(error){
             console.log(error)
         }
@@ -143,6 +146,12 @@ export const UpdateBook = () => {
                     <label className="label">Date</label>
                     <div className="control">
                         <input type="date" className="input" placeholder="Date" value={Date} onChange={(e) => setDate(e.target.value)}/>
+                    </div>
+                </div>
+                <div className="field">
+                    <label className="label">Image Link</label>
+                    <div className="control">
+                        <input type="text" className="input" placeholder="Image Link" value={Img} onChange={(e) => setImg(e.target.value)}/>
                     </div>
                 </div>
                 <div className="field">

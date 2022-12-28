@@ -4,7 +4,8 @@ import { AddBook } from "./components/AddBook";
 import UpdateBook from "./components/UpdateBook";
 import BookListReader from "./components/BookListReader";
 import BookDetail from "./components/BookDetail";
-
+import BookDetailAdmin from "./components/BookDetailAdmin";
+import './App.css';
 function App() {
   return (
     <BrowserRouter>
@@ -15,6 +16,7 @@ function App() {
           <Route path="/update/:id" element={<UpdateBook/>}/>
           <Route path="/" element={<BookListReader/>}/>
           <Route path="/BookDetail/:id" element={<BookDetail/>}/>
+          <Route path="/BookDetailAdmin/:id" element={<BookDetailAdmin/>}/>
         </Routes>
       </div>
     </BrowserRouter>

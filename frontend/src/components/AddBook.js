@@ -15,6 +15,8 @@ export const AddBook = () => {
     const[Description, setDescription] = useState("");
     const[Page, setPage] = useState("");
     const[Date, setDate] = useState("");
+    const[Img, setImg]= useState("");
+
     const navigate = useNavigate();
 
     const saveBook = async (e) => {
@@ -32,9 +34,10 @@ export const AddBook = () => {
                 Status, 
                 Description, 
                 Page, 
-                Date
+                Date,
+                Img
             });
-            navigate("/")
+            navigate("/admin")
         }catch(error){
             console.log(error)
         }
@@ -47,56 +50,56 @@ export const AddBook = () => {
                 <div className="field">
                     <label className="label">ISBN</label>
                     <div className="control">
-                        <input type="number" className="input" placeholder="ISBN" value={ISBN} onChange={(e) => setISBN(e.target.value)}/>
+                        <input required type="number" className="input" placeholder="ISBN" value={ISBN} onChange={(e) => setISBN(e.target.value)}/>
                     </div>
                 </div>
                 <div className="field">
                     <label className="label">Name</label>
                     <div className="control">
-                        <input type="text" className="input" placeholder="Name" value={name} onChange={(e) => setName(e.target.value)}/>
+                        <input required type="text" className="input" placeholder="Name" value={name} onChange={(e) => setName(e.target.value)}/>
                     </div>
                 </div>
                 <div className="field">
                     <label className="label">Author</label>
                     <div className="control">
-                        <input type="text" className="input" placeholder="Author" value={Author} onChange={(e) => setAuthor(e.target.value)}/>
+                        <input required type="text" className="input" placeholder="Author" value={Author} onChange={(e) => setAuthor(e.target.value)}/>
                     </div>
                 </div>
                 <div className="field">
                     <label className="label">Language</label>
                     <div className="control">
-                        <input type="text" className="input" placeholder="Language" value={Language} onChange={(e) => setLanguage(e.target.value)}/>
+                        <input required type="text" className="input" placeholder="Language" value={Language} onChange={(e) => setLanguage(e.target.value)}/>
                     </div>
                 </div>
                 <div className="field">
                     <label className="label">Cover</label>
                     <div className="control">
-                        <input type="text" className="input" placeholder="Cover" value={Cover} onChange={(e) => setCover(e.target.value)}/>
+                        <input required type="text" className="input" placeholder="Cover" value={Cover} onChange={(e) => setCover(e.target.value)}/>
                     </div>
                 </div>
                 <div className="field">
                     <label className="label">Category</label>
                     <div className="control">
-                        <input type="text" className="input" placeholder="Category" value={Category} onChange={(e) => setCategory(e.target.value)}/>
+                        <input required type="text" className="input" placeholder="Category" value={Category} onChange={(e) => setCategory(e.target.value)}/>
                     </div>
                 </div>
                 <div className="field">
                     <label className="label">Stock</label>
                     <div className="control">
-                        <input type="number" className="input" placeholder="Stock" value={Stock} onChange={(e) => setStock(e.target.value)}/>
+                        <input required type="number" className="input" placeholder="Stock" value={Stock} onChange={(e) => setStock(e.target.value)}/>
                     </div>
                 </div>
                 <div className="field">
                     <label className="label">Price</label>
                     <div className="control">
-                        <input type="number" className="input" placeholder="Price" value={Price} onChange={(e) => setPrice(e.target.value)}/>
+                        <input required type="number" className="input" placeholder="Price" value={Price} onChange={(e) => setPrice(e.target.value)}/>
                     </div>
                 </div>
                 <div className="field">
                     <label className="label">Status</label>
                     <div className="control">
                         <div className="select is-fullwidth">
-                            <select value={Status} onChange={(e) => setStatus(e.target.value)}>
+                            <select required value={Status} onChange={(e) => setStatus(e.target.value)}>
                                 <option>Select...</option>
                                 <option value="True">True</option>
                                 <option value="False">False</option>
@@ -107,19 +110,25 @@ export const AddBook = () => {
                 <div className="field">
                     <label className="label">Description</label>
                     <div className="control">
-                        <input type="text" className="input" placeholder="Description" value={Description} onChange={(e) => setDescription(e.target.value)}/>
+                        <input required type="text" className="input" placeholder="Description" value={Description} onChange={(e) => setDescription(e.target.value)}/>
                     </div>
                 </div>
                 <div className="field">
                     <label className="label">Page</label>
                     <div className="control">
-                        <input type="number" className="input" placeholder="Page" value={Page} onChange={(e) => setPage(e.target.value)}/>
+                        <input required type="number" className="input" placeholder="Page" value={Page} onChange={(e) => setPage(e.target.value)}/>
                     </div>
                 </div>
                 <div className="field">
                     <label className="label">Date</label>
                     <div className="control">
-                        <input type="date" className="input" placeholder="Date" value={Date} onChange={(e) => setDate(e.target.value)}/>
+                        <input required type="date" className="input" placeholder="Date" value={Date} onChange={(e) => setDate(e.target.value)}/>
+                    </div>
+                </div>
+                <div className="field">
+                    <label className="label">Image Link</label>
+                    <div className="control">
+                        <input required type="text" className="input" placeholder="Insert Link" value={Img} onChange={(e) => setImg(e.target.value)}/>
                     </div>
                 </div>
                 <div className="field">

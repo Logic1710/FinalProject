@@ -1,16 +1,27 @@
 import React, {useState, useEffect} from 'react';
-import { Link, useParams } from 'react-router-dom';
+import {Link, useNavigate, useParams} from 'react-router-dom';
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.css';
 import '../App.css';
 
-const BookDetail = () => {
+
+const BookDetailAdmin = () => {
 
     const {id} = useParams();
 
     useEffect(() => {
         getBookById();
     }, []);
+
+    const navigate = useNavigate();
+    const onDeleteClick = (id) => {
+        try{
+            axios.delete(`http://localhost:5000/books/${id}`);
+            navigate("/admin");
+        }catch(error){
+            console.log(error);
+        }
+    };
 
     const[ISBN, setISBN] = useState("");
     const[name, setName] = useState("");
@@ -48,8 +59,8 @@ const BookDetail = () => {
         <div className="Booklist">
             <div className="wrapper">
                 <img className="imgdetail"
-                    src={Img}
-                    height={200}
+                     src={Img}
+                     height={200}
                 />
                 <h2 className="titledetail">{name}</h2>
                 <div className="row">
@@ -90,7 +101,11 @@ const BookDetail = () => {
                         <p className="h3detail">{Description}</p>
                     </div>
                 </div>
-                <Link to={`/`} className="button is-small is-info">Back</Link>
+                <Link to={`/admin`} className="button is-info is-small mr-4">Back</Link>
+                <Link to={`/update/${id}`} className="button is-info is-small mr-4">Edit</Link>
+                <button className="button is-danger is-small" onClick={()=> {
+                    onDeleteClick(id);
+                }}>Delete</button>
             </div>
 
         </div>
@@ -98,4 +113,4 @@ const BookDetail = () => {
 }
 
 
-export default BookDetail
+export default BookDetailAdmin
