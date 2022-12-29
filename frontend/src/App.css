@@ -86,3 +86,6 @@ table{
     text-justify: none;
 }
 
+.search-bar mb-4{
+    width: 100%;
+}

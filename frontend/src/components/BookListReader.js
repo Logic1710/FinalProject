@@ -1,12 +1,8 @@
 import React,{useEffect, useState} from 'react';
 import axios from 'axios';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Container from 'react-bootstrap/Container';
 import 'bootstrap/dist/css/bootstrap.css';
 import {Link} from "react-router-dom";
 import '../App.css';
-
 
 const BookListReader = () => {
     const [books, setBook] = useState([]);
@@ -18,11 +14,21 @@ const BookListReader = () => {
         const response = await axios.get('http://localhost:5000/books')
         setBook(response.data)
     }
+
+    const [searchBook, setSearchBook] = useState("");
+
     return (
         <div className="Booklist">
             <div className="wrapper">
                 <h1 className="title">Wilkommen in der Bibliothek</h1>
-                    {books.map((book, index) => (
+                <input type="text" style={{width: "100%"}} className="search-bar mb-4" onChange={(event) => {setSearchBook(event.target.value)}} placeholder="Search..."/>
+                {books.filter((book) => {
+                    if (searchBook == "") {
+                        return book
+                    } else if (book.name.toLowerCase().includes(searchBook.toLowerCase())){
+                        return book
+                    }
+                }).map((book) => (
                     <Link to={`./BookDetail/${book._id}`}>
                         <div className='row mb-5' key={book._id}>
                             <div className='col-md-3'>
@@ -44,10 +50,9 @@ const BookListReader = () => {
                             }}
                         />
                     </Link>
-                        ))}
-
-                </div>
+                ))}
             </div>
+        </div>
     )
 }
 export default BookListReader

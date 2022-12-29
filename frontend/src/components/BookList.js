@@ -9,7 +9,6 @@ const BookList = () => {
     useEffect(() =>{
         getBooks();
     }, [])
-    // .
     const getBooks = async () =>{
         const response = await axios.get('http://localhost:5000/books')
         setBook(response.data)
@@ -25,13 +24,22 @@ const BookList = () => {
         }
     };
 
+    const [searchBook, setSearchBook] = useState("");
+
   return (
     <div className="Booklist">
-
         <div className="wrapper">
             <h1 className="title">Willkommen in der Bibliothek</h1>
             <Link to={`/add`} className="button is-info is-small mb-4">Add New Book</Link>
-            {books.map((book, index) => (
+            <br/>
+            <input type="text" style={{width: "100%"}} className="search-bar mb-4" onChange={(event) => {setSearchBook(event.target.value)}} placeholder="Search..."/>
+            {books.filter((book) => {
+                if (searchBook == "") {
+                    return book
+                } else if (book.name.toLowerCase().includes(searchBook.toLowerCase())){
+                    return book
+                }
+            }).map((book) => (
                 <Link to={`/BookDetailAdmin/${book._id}`}>
                     <div className='row mb-5' key={book._id}>
                         <div className='col-md-3'>
