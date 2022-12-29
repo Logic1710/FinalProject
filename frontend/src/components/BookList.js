@@ -49,11 +49,8 @@ const BookList = () => {
                             <h2>{book.name}</h2>
                             <h3>Author   : {book.Author}</h3>
                             <h3>Release-Date : {book.Date}</h3>
+                            <h3>Stock : {book.Stock}</h3>
                             <h3 className="mb-2">Price : IDR {book.Price}</h3>
-                            <Link to={`/update/${book._id}`} className="button is-info is-small">Edit</Link>
-                            <button className="button is-danger is-small ml-2" onClick={()=> {
-                                onDeleteClick(book._id);
-                            }}>Delete</button>
                         </div>
                     </div>
                     <hr

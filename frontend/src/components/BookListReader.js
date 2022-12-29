@@ -38,6 +38,7 @@ const BookListReader = () => {
                                 <h2>{book.name}</h2>
                                 <h3>Author   : {book.Author}</h3>
                                 <h3>Release-Date : {book.Date}</h3>
+                                <h3>Stock : {book.Stock}</h3>
                                 <h3>Price : IDR {book.Price}</h3>
                             </div>
                         </div>
