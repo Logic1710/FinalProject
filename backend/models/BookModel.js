@@ -48,6 +48,10 @@ const Book = mongoose.Schema({
     Date:{
         type: Date,
         required: true
+    },
+    Img:{
+        type: String,
+        required: true
     }
 })
 

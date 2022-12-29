@@ -1,8 +1,12 @@
 import React,{useEffect, useState} from 'react';
 import axios from 'axios';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Container from 'react-bootstrap/Container';
+import 'bootstrap/dist/css/bootstrap.css';
 import {Link} from "react-router-dom";
-// import BookDetail from "./BookDetail";
-// .
+import '../App.css';
+
 
 const BookListReader = () => {
     const [books, setBook] = useState([]);
@@ -14,40 +18,36 @@ const BookListReader = () => {
         const response = await axios.get('http://localhost:5000/books')
         setBook(response.data)
     }
-
-    // const navigate = useNavigate();
-
     return (
-        <div className="columns">
-            <div className="column is-half">
-                <table className="table is-striped is-fullwidth mt-5">
-                    <thead>
-                    <tr>
-                        <th>No</th>
-                        <th>Name</th>
-                        <th>Author</th>
-                        <th>Category</th>
-                        <th>Description</th>
-                        <th>Stock</th>
-                        <th>Price</th>
-                    </tr>
-                    </thead>
-                    <tbody>
+        <div className="Booklist">
+            <div className="wrapper">
+                <h1 className="title">Wilkommen in der Bibliothek</h1>
                     {books.map((book, index) => (
-                        <tr key={book._id}>
-                            <td>{index + 1}</td>
-                            <Link to={`./BookDetail/${book._id}`}>{book.name}</Link>
-                            <td>{book.Author}</td>
-                            <td>{book.Category}</td>
-                            <td>{book.Description}</td>
-                            <td>{book.Stock}</td>
-                            <td>{book.Price}</td>
-                        </tr>
-                    ))}
-                    </tbody>
-                </table>
+                    <Link to={`./BookDetail/${book._id}`}>
+                        <div className='row mb-5' key={book._id}>
+                            <div className='col-md-3'>
+                                <img src={book.Img} alt='cover'/>
+                            </div>
+                            <div className='col-md-9'>
+                                <h2>{book.name}</h2>
+                                <h3>Author   : {book.Author}</h3>
+                                <h3>Release-Date : {book.Date}</h3>
+                                <h3>Price : IDR {book.Price}</h3>
+                            </div>
+                        </div>
+                        <hr
+                            style={{
+                                color: '#000000',
+                                backgroundColor: '#000000',
+                                height: .5,
+                                borderColor : '#000000'
+                            }}
+                        />
+                    </Link>
+                        ))}
+
+                </div>
             </div>
-        </div>
     )
 }
 export default BookListReader

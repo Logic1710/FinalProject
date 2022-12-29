@@ -1,69 +1,85 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="3f82d72b-c59a-490e-9cb9-4a0503e0bf9d" name="Changes" comment="signin" />
+=======
+    <list default="true" id="d9df2208-6f67-43ed-b44b-3abc876dbe88" name="Changes" comment="yg belom :&#10;Sign in measure,&#10;Search bar">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/BookListReader.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/BookListReader.js" afterDir="false" />
+    </list>
+>>>>>>> ef69be2b5a8d8d666b32a3a2e5376b7d1d2f7ee9
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="CSS File" />
-        <option value="JavaScript File" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="2JDrpxGmvPQ8ymvaoRPqAn3wOOt" />
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectId" id="2JUDZcCUDDWz5OzM4BinrlQWvQP" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2022.2.1\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/triharyanto/WebstormProjects/sgu/sem3/finalproject/frontend/public",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/frontend/public" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="3f82d72b-c59a-490e-9cb9-4a0503e0bf9d" name="Changes" comment="" />
-      <created>1671623680762</created>
+      <changelist id="d9df2208-6f67-43ed-b44b-3abc876dbe88" name="Changes" comment="" />
+      <created>1672123824445</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
+<<<<<<< HEAD
       <updated>1671623680762</updated>
       <workItem from="1671623683073" duration="3446000" />
       <workItem from="1671627386557" duration="3356000" />
       <workItem from="1672035160979" duration="1211000" />
       <workItem from="1672036576294" duration="9302000" />
       <workItem from="1672228316182" duration="2000" />
+=======
+      <updated>1672123824445</updated>
+      <workItem from="1672123826216" duration="55000" />
+      <workItem from="1672123882939" duration="6008000" />
+      <workItem from="1672216599415" duration="21433000" />
+>>>>>>> ef69be2b5a8d8d666b32a3a2e5376b7d1d2f7ee9
     </task>
-    <task id="LOCAL-00001" summary="signin">
-      <created>1671630501747</created>
+    <task id="LOCAL-00001" summary="yg belom :&#10;Sign in measure,&#10;Search bar">
+      <created>1672238216203</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1671630501747</updated>
+      <updated>1672238216203</updated>
     </task>
     <option name="localTasksCounter" value="2" />
     <servers />
@@ -81,10 +97,24 @@
         </entry>
       </map>
     </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="origin/styling" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="signin" />
-    <option name="LAST_COMMIT_MESSAGE" value="signin" />
+    <MESSAGE value="yg belom :&#10;Sign in measure,&#10;Search bar" />
+    <option name="LAST_COMMIT_MESSAGE" value="yg belom :&#10;Sign in measure,&#10;Search bar" />
   </component>
 </project>
