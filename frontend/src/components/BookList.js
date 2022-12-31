@@ -1,7 +1,6 @@
 import React,{useEffect, useState} from 'react';
 import axios from 'axios';
 import {Link} from "react-router-dom";
-import {useNavigate} from "react-router-dom";
 import '../App.css';
 
 const BookList = () => {
@@ -14,15 +13,11 @@ const BookList = () => {
         setBook(response.data)
     }
 
-    const navigate = useNavigate();
-    const onDeleteClick = (id) => {
-        try{
-        axios.delete(`http://localhost:5000/books/${id}`);
-        navigate("/admin");
-        }catch(error){
-            console.log(error);
-        }
-    };
+
+    const handleLogout = () => {
+        localStorage.clear();
+        window.location.pathname = "/admin";
+    }
 
     const [searchBook, setSearchBook] = useState("");
 
@@ -31,6 +26,7 @@ const BookList = () => {
         <div className="wrapper">
             <h1 className="title">Willkommen in der Bibliothek</h1>
             <Link to={`/add`} className="button is-info is-small mb-4">Add New Book</Link>
+            <button name="logout" onClick={handleLogout}>Logout</button>
             <br/>
             <input type="text" style={{width: "100%"}} className="search-bar mb-4" onChange={(event) => {setSearchBook(event.target.value)}} placeholder="Search..."/>
             {books.filter((book) => {
