@@ -4,14 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7d51c603-d016-4f28-898e-da0f5e21bac9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/Login.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/ProtectedRoute.js" afterDir="false" />
+    <list default="true" id="7d51c603-d016-4f28-898e-da0f5e21bac9" name="Changes" comment="add: &#10;Login.js, ProtectedRoute.js&#10;update :&#10;1. BookList.js + logout button&#10;2. App.js">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/AddBook.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/AddBook.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/BookList.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/BookList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/UpdateBook.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/UpdateBook.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,8 +62,16 @@
       <workItem from="1672315751944" duration="282000" />
       <workItem from="1672316035758" duration="1467000" />
       <workItem from="1672401222662" duration="803000" />
-      <workItem from="1672404783342" duration="16728000" />
+      <workItem from="1672404783342" duration="21373000" />
     </task>
+    <task id="LOCAL-00001" summary="add: &#10;Login.js, ProtectedRoute.js&#10;update :&#10;1. BookList.js + logout button&#10;2. App.js">
+      <created>1672490972545</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1672490972545</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -81,5 +87,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add: &#10;Login.js, ProtectedRoute.js&#10;update :&#10;1. BookList.js + logout button&#10;2. App.js" />
+    <option name="LAST_COMMIT_MESSAGE" value="add: &#10;Login.js, ProtectedRoute.js&#10;update :&#10;1. BookList.js + logout button&#10;2. App.js" />
   </component>
 </project>

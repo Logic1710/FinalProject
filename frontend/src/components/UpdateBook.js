@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
-import { useNavigate, useParams } from 'react-router-dom';
+import {Link, useNavigate, useParams} from 'react-router-dom';
 
 export const UpdateBook = () => {
     const[ISBN, setISBN] = useState("");
@@ -68,7 +68,8 @@ export const UpdateBook = () => {
 
   return (
     <div className="columns">
-        <div className="column is-half">
+        <div className="column is-half mt-5 mb-5">
+            <h1 className="title">Update Book</h1>
             <form onSubmit={updateBook}>
                 <div className="field">
                     <label className="label">ISBN</label>
@@ -156,6 +157,7 @@ export const UpdateBook = () => {
                 </div>
                 <div className="field">
                     <div className="control">
+                        <Link to={`/admin`} className="button is-info is-link mr-3">Cancel</Link>
                         <button type='submit' className="button is-success">Update</button>
                     </div>
                 </div>

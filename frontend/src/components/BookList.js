@@ -26,7 +26,7 @@ const BookList = () => {
         <div className="wrapper">
             <h1 className="title">Willkommen in der Bibliothek</h1>
             <Link to={`/add`} className="button is-info is-small mb-4">Add New Book</Link>
-            <button name="logout" onClick={handleLogout}>Logout</button>
+            <button name="logout" className="button is-info is-small mb-4 ml-3" onClick={handleLogout}>Logout</button>
             <br/>
             <input type="text" style={{width: "100%"}} className="search-bar mb-4" onChange={(event) => {setSearchBook(event.target.value)}} placeholder="Search..."/>
             {books.filter((book) => {

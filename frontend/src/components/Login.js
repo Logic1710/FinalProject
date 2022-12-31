@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 
 function Login() {
-    const [adminData, setAdminData] = useState({username:" ", password: " "});
+    const [adminData, setAdminData] = useState({username:"", password: ""});
     const [errorMessage, setErrorMessage] = useState("");
 
     const handleInputChange = (e) => {
@@ -15,25 +15,22 @@ function Login() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-
         if (
             adminData.username.toLowerCase() === "admin" &&
-            adminData.password === "dylansayangedo"
+            adminData.password === "adminlagi"
         ) {
-            //success
+            // Success
             localStorage.setItem("isAuthenticated", "true");
             window.location.pathname = "/admin";
-        } else if (
-            adminData.username.toLowerCase() !== "admin" &&
-            adminData.password !== "dylansayangedo"
-        ) {
-            setErrorMessage("Invalid Username or Password. Please try again")
-            alert(errorMessage)
-        } else {
-            // failed
-            setErrorMessage("Failed. Please refresh and try again.");
-            alert(errorMessage)
+        }else if (adminData.username == "" || adminData.password == "") {
+            setErrorMessage("Username or Password is empty")
             console.error(errorMessage)
+            alert("Username or Password is empty")
+        } else {
+            //Invalid
+            setErrorMessage("Invalid Username or Password")
+            console.error(errorMessage)
+            alert("Invalid Username or Password")
         }
     };
     return(
@@ -45,7 +42,7 @@ function Login() {
                         <label>Username</label>
                         <input
                             type="text"
-                            className="form-control mt-1" onChange={(e) => handleInputChange(e)}
+                            className="form-control mt-1" name="username" onChange={(e) => handleInputChange(e)}
                             placeholder="Enter username"
                         />
                     </div>
@@ -53,7 +50,7 @@ function Login() {
                         <label>Password</label>
                         <input
                             type="password"
-                            className="form-control mt-1" onChange={(e) => handleInputChange(e)}
+                            className="form-control mt-1" name="password" onChange={(e) => handleInputChange(e)}
                             placeholder="Enter password"
                         />
                     </div>
