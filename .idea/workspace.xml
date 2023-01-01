@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
-  </component>
   <component name="ChangeListManager">
-<<<<<<< HEAD
-    <list default="true" id="3f82d72b-c59a-490e-9cb9-4a0503e0bf9d" name="Changes" comment="signin" />
-=======
-    <list default="true" id="d9df2208-6f67-43ed-b44b-3abc876dbe88" name="Changes" comment="yg belom :&#10;Sign in measure,&#10;Search bar">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/BookListReader.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/BookListReader.js" afterDir="false" />
-    </list>
->>>>>>> ef69be2b5a8d8d666b32a3a2e5376b7d1d2f7ee9
+    <list default="true" id="9ac0c9b1-2f01-4f84-a586-b3c273a67e48" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,7 +10,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="signin" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -28,7 +18,7 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="2JUDZcCUDDWz5OzM4BinrlQWvQP" />
+  <component name="ProjectId" id="2Jj6spehUh7225DvMOaCjpwrUpW" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -38,83 +28,27 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/triharyanto/WebstormProjects/sgu/sem3/finalproject/frontend/public",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/frontend/public" />
-    </key>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="d9df2208-6f67-43ed-b44b-3abc876dbe88" name="Changes" comment="" />
-      <created>1672123824445</created>
+      <changelist id="9ac0c9b1-2f01-4f84-a586-b3c273a67e48" name="Changes" comment="" />
+      <created>1672579355788</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-<<<<<<< HEAD
-      <updated>1671623680762</updated>
-      <workItem from="1671623683073" duration="3446000" />
-      <workItem from="1671627386557" duration="3356000" />
-      <workItem from="1672035160979" duration="1211000" />
-      <workItem from="1672036576294" duration="9302000" />
-      <workItem from="1672228316182" duration="2000" />
-=======
-      <updated>1672123824445</updated>
-      <workItem from="1672123826216" duration="55000" />
-      <workItem from="1672123882939" duration="6008000" />
-      <workItem from="1672216599415" duration="21433000" />
->>>>>>> ef69be2b5a8d8d666b32a3a2e5376b7d1d2f7ee9
+      <updated>1672579355788</updated>
+      <workItem from="1672579357995" duration="448000" />
     </task>
-    <task id="LOCAL-00001" summary="yg belom :&#10;Sign in measure,&#10;Search bar">
-      <created>1672238216203</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1672238216203</updated>
-    </task>
-    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-    <option name="RECENT_FILTERS">
-      <map>
-        <entry key="Branch">
-          <value>
-            <list>
-              <RecentGroup>
-                <option name="FILTER_VALUES">
-                  <option value="origin/styling" />
-                </option>
-              </RecentGroup>
-            </list>
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="yg belom :&#10;Sign in measure,&#10;Search bar" />
-    <option name="LAST_COMMIT_MESSAGE" value="yg belom :&#10;Sign in measure,&#10;Search bar" />
   </component>
 </project>
