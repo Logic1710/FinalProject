@@ -15,14 +15,12 @@ const BookDetailAdmin = () => {
 
     const navigate = useNavigate();
     const onDeleteClick = (id) => {
-        const answer = confirm("Are you sure ?");
-        if (answer) {
-            try {
-                axios.delete(`http://localhost:5000/books/${id}`);
-                navigate("/admin");
-            } catch (error) {
-                console.log(error);
-            }
+        try{
+            axios.delete(`http://localhost:5000/books/${id}`);
+            navigate("/admin");
+            window.location.reload();
+        }catch(error){
+            console.log(error);
         }
     };
 
@@ -63,6 +61,7 @@ const BookDetailAdmin = () => {
             <div className="wrapper">
                 <img className="imgdetail"
                      src={Img}
+                     alt="Cover Image"
                      height={200}
                 />
                 <h2 className="titledetail">{name}</h2>
