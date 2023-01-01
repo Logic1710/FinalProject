@@ -15,12 +15,15 @@ const BookDetailAdmin = () => {
 
     const navigate = useNavigate();
     const onDeleteClick = (id) => {
-        try{
-            axios.delete(`http://localhost:5000/books/${id}`);
-            navigate("/admin");
-            window.location.reload();
-        }catch(error){
-            console.log(error);
+        const answer = window.confirm("Are you sure ?");
+        if (answer) {
+            try {
+                axios.delete(`http://localhost:5000/books/${id}`);
+                navigate("/admin");
+                window.location.reload();
+            } catch (error) {
+                console.log(error);
+            }
         }
     };
 

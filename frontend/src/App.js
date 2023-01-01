@@ -8,15 +8,13 @@ import BookDetailAdmin from "./components/BookDetailAdmin";
 import Login from "./components/Login";
 import NotFound from "./components/NotFound";
 import './App.css';
-import {Fragment} from "react";
- import ProtectedRoute from "./components/ProtectedRoute";
+import ProtectedRoute from "./components/ProtectedRoute";
 function App() {
 
   return (
     <BrowserRouter>
         <div className="container">
           <Routes>
-          
             <Route path="/login" element={<Login />}/>
             <Route path="/admin" element={<ProtectedRoute />}>
               <Route path="/admin" element={<BookList />}/>
@@ -29,6 +27,7 @@ function App() {
             <Route path="/update/:id" element={<UpdateBook/>}/>
             <Route path="/" element={<BookListReader/>}/>
             <Route path="/BookDetail/:id" element={<BookDetail/>}/>
+            <Route path="*" element={<NotFound/>}/>
           </Routes>
         </div>
     </BrowserRouter>
